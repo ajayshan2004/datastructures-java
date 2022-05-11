@@ -4,7 +4,8 @@ public class Tryout {
 //        System.out.println("Hello World!");
 //        testDynamicArray();
 //        testDoublyLinkedList();
-        testStackWithBuiltInLinkedList();
+//        testStackWithBuiltInLinkedList();
+        testQueueWithBuiltInLinkedList();
 
     }
 
@@ -83,5 +84,30 @@ public class Tryout {
         System.out.println(intStack);
         intStack.push(17);
         System.out.println(intStack);
+    }
+
+    public static void testQueueWithBuiltInLinkedList() {
+        QueueWithBuiltInLinkedList<Integer> intQueue = new QueueWithBuiltInLinkedList<>();
+        System.out.println(intQueue);
+        intQueue.offer(12);
+        System.out.println(intQueue);
+        intQueue.offer(13);
+        System.out.println(intQueue);
+        intQueue.poll();
+        System.out.println(intQueue);
+        intQueue.offer(14);
+        System.out.println(intQueue);
+        intQueue.offer(15);
+        System.out.println(intQueue);
+        intQueue.poll();
+        System.out.println(intQueue);
+        intQueue.offer(16);
+        System.out.println(intQueue);
+        intQueue.poll();
+        System.out.println(intQueue);
+        intQueue.poll();
+        System.out.println(intQueue);
+        intQueue.offer(17);
+        System.out.println(intQueue);
     }
 }
