@@ -3,7 +3,8 @@ public class Tryout {
     public static void main(String[] args) {
 //        System.out.println("Hello World!");
 //        testDynamicArray();
-        testDoublyLinkedList();
+//        testDoublyLinkedList();
+        testStackWithBuiltInLinkedList();
 
     }
 
@@ -57,5 +58,30 @@ public class Tryout {
         System.out.println(intlist);
         intlist.removeFirst();
         System.out.println(intlist);
+    }
+
+    public static void testStackWithBuiltInLinkedList() {
+        StackWithBuiltInLinkedList<Integer> intStack = new StackWithBuiltInLinkedList<>();
+        System.out.println(intStack);
+        intStack.push(12);
+        System.out.println(intStack);
+        intStack.push(13);
+        System.out.println(intStack);
+        intStack.pop();
+        System.out.println(intStack);
+        intStack.push(14);
+        System.out.println(intStack);
+        intStack.push(15);
+        System.out.println(intStack);
+        intStack.pop();
+        System.out.println(intStack);
+        intStack.push(16);
+        System.out.println(intStack);
+        intStack.pop();
+        System.out.println(intStack);
+        intStack.pop();
+        System.out.println(intStack);
+        intStack.push(17);
+        System.out.println(intStack);
     }
 }

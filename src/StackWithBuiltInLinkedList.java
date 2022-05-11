@@ -41,4 +41,9 @@ public class StackWithBuiltInLinkedList<T> implements Iterable<T> {
     public Iterator<T> iterator() {
         return list.iterator();
     }
+
+    @Override
+    public String toString() {
+        return list.toString();
+    }
 }
