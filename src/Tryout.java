@@ -5,7 +5,8 @@ public class Tryout {
 //        testDynamicArray();
 //        testDoublyLinkedList();
 //        testStackWithBuiltInLinkedList();
-        testQueueWithBuiltInLinkedList();
+//        testQueueWithBuiltInLinkedList();
+        testPQWithMinHeap();
 
     }
 
@@ -109,5 +110,32 @@ public class Tryout {
         System.out.println(intQueue);
         intQueue.offer(17);
         System.out.println(intQueue);
+    }
+
+    public static void testPQWithMinHeap() {
+        PriorityQueueWithMinHeap<Integer> intHeap = new PriorityQueueWithMinHeap<>();
+        System.out.println(intHeap);
+        intHeap.add(2);
+        System.out.println(intHeap);
+        intHeap.add(3);
+        System.out.println(intHeap);
+        intHeap.add(2);
+        System.out.println(intHeap);
+        intHeap.add(7);
+        System.out.println(intHeap);
+        intHeap.add(7);
+        System.out.println(intHeap);
+        intHeap.add(13);
+        System.out.println(intHeap);
+        intHeap.add(2);
+        System.out.println(intHeap);
+        intHeap.add(11);
+        System.out.println(intHeap);
+        System.out.println("Check whether the data is in correct positions: 2 -> 0,2,6 | 7 -> 3,4 | 11 -> 7 | 13 -> 5 | 3 -> 1");
+        int initialSize = intHeap.size();
+        for (int i = 0; i < initialSize; i++) {
+            System.out.println(intHeap.poll() + " ");
+        }
+
     }
 }
