@@ -6,7 +6,8 @@ public class Tryout {
 //        testDoublyLinkedList();
 //        testStackWithBuiltInLinkedList();
 //        testQueueWithBuiltInLinkedList();
-        testPQWithMinHeap();
+//        testPQWithMinHeap();
+        testUnionFind();
 
     }
 
@@ -137,5 +138,34 @@ public class Tryout {
             System.out.println(intHeap.poll() + " ");
         }
 
+    }
+
+    public static void testUnionFind() {
+        UnionFind intUF = new UnionFind(12);
+        System.out.println(intUF);
+        intUF.union(0, 1);
+        System.out.println(intUF);
+        intUF.union(2, 3);
+        System.out.println(intUF);
+        intUF.union(4, 5);
+        System.out.println(intUF);
+        intUF.union(6, 7);
+        System.out.println(intUF);
+        intUF.union(8,9 );
+        System.out.println(intUF);
+        intUF.union(9, 6);
+        System.out.println(intUF);
+        intUF.union(7, 5);
+        System.out.println(intUF);
+        intUF.union(0, 2);
+        System.out.println(intUF);
+        intUF.union(3, 4);
+        System.out.println(intUF);
+        intUF.union(6, 1);
+        System.out.println(intUF);
+        intUF.union(8, 9);
+        System.out.println(intUF);
+        intUF.union(11, 10);
+        System.out.println(intUF);
     }
 }
