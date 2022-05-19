@@ -220,7 +220,7 @@ public class PriorityQueueWithMinHeap <T extends Comparable<T>> {
         T data = heap.get(i);
         swap(i, heapSize);
         heap.set(heapSize, null);
-        mapRemove(data);
+        mapRemove(data );
 
         //If the removed node was already the last element, there is no need for further sinking etc.,
         if (i == heapSize) return data;

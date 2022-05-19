@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 //Main class to tryout all implemented DSes
 public class Tryout {
     public static void main(String[] args) {
@@ -7,7 +9,8 @@ public class Tryout {
 //        testStackWithBuiltInLinkedList();
 //        testQueueWithBuiltInLinkedList();
 //        testPQWithMinHeap();
-        testUnionFind();
+//        testUnionFind();
+        testBinarySearchTreeWithTraversalIterators();
 
     }
 
@@ -167,5 +170,42 @@ public class Tryout {
         System.out.println(intUF);
         intUF.union(11, 10);
         System.out.println(intUF);
+    }
+
+    //internally tests BinarySearchTree class as there is no way to know tree structure without traversing!!
+    public static void testBinarySearchTreeWithTraversalIterators() {
+        BinarySearchTreeWithTraversalIterators<Integer> intBST = new BinarySearchTreeWithTraversalIterators<>();
+        intBST.add(7);
+        intBST.add(20);
+        intBST.add(5);
+        intBST.add(15);
+        intBST.add(10);
+        intBST.add(4);
+        intBST.add(4);
+        intBST.add(33);
+        intBST.add(2);
+        intBST.add(25);
+        intBST.add(6);
+        Iterator<Integer> preIter = intBST.traverse(TreeTraversalOrder.PRE_ORDER);
+        Iterator<Integer> inIter = intBST.traverse(TreeTraversalOrder.IN_ORDER);
+        Iterator<Integer> postIter = intBST.traverse(TreeTraversalOrder.POST_ORDER);
+        Iterator<Integer> levelIter = intBST.traverse(TreeTraversalOrder.LEVEL_ORDER);
+        System.out.println("\nPreOrder : ");
+        while (preIter.hasNext()) {
+            System.out.print(preIter.next() + " ");
+        }
+        System.out.println("\nInOrder : ");
+        while (inIter.hasNext()) {
+            System.out.print(inIter.next() + " ");
+        }
+        System.out.println("\nPostOrder : ");
+        while (postIter.hasNext()) {
+            System.out.print(postIter.next() + " ");
+        }
+        System.out.println("\nLevelOrder : ");
+        while (levelIter.hasNext()) {
+            System.out.print(levelIter.next() + " ");
+        }
+
     }
 }
