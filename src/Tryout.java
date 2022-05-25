@@ -10,7 +10,8 @@ public class Tryout {
 //        testQueueWithBuiltInLinkedList();
 //        testPQWithMinHeap();
 //        testUnionFind();
-        testBinarySearchTreeWithTraversalIterators();
+//        testBinarySearchTreeWithTraversalIterators();
+        testHashtableWithSeparateChaining();
 
     }
 
@@ -207,5 +208,22 @@ public class Tryout {
             System.out.print(levelIter.next() + " ");
         }
 
+    }
+
+    public static void testHashtableWithSeparateChaining() {
+        HashtableWithSeparateChaining<String, Integer> nameAgeHT = new HashtableWithSeparateChaining<>();
+        nameAgeHT.insert("Will", 21);
+        nameAgeHT.insert("Leah", 18);
+        nameAgeHT.insert("Rick", 61);
+        nameAgeHT.insert("Rai", 25);
+        nameAgeHT.insert("Lara", 34);
+        nameAgeHT.insert("Ryan", 56);
+        nameAgeHT.insert("Lara", 34);
+        nameAgeHT.insert("Finn", 21);
+        nameAgeHT.insert("Mark", 10);
+        System.out.println(nameAgeHT.toString());
+        System.out.println("Rick object = " + nameAgeHT.get("Rick"));
+        nameAgeHT.remove("Lara");
+        System.out.println(" After removing Lara: " + nameAgeHT.toString());
     }
 }
